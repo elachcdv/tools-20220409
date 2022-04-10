@@ -1,6 +1,16 @@
 import {Post} from './model/post';
 import {Author} from './model/author';
 import {Comment} from './model/comment';
+// import {Api} from './api';
+
+class Api {
+  postsSuffix: string = 'posts';
+  constructor(public readonly apiUrl: string) {}
+  // definicja metody
+  public getPostsUrl(): string {
+    return `${this.apiUrl}/${this.postsSuffix}`;
+  }
+}
 
 const apiUrl: string = 'https://jsonplaceholder.typicode.com';
 
